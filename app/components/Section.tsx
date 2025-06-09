@@ -1,12 +1,11 @@
 import { cn } from "@/lib/util";
 
-interface Props {
+interface Params {
   children: React.ReactNode;
   className?: string;
-  title: string;
 }
 
-const Section = ({ children, className, title }: Props) => {
+const Section = ({ children, className }: Params) => {
   return (
     <section
       className={cn(
@@ -14,9 +13,6 @@ const Section = ({ children, className, title }: Props) => {
         className
       )}
     >
-      <h2 className="mb-8 text-4xl font-extrabold leading-none tracking-tight text-[color:var(--green-text)] md:text-5xl lg:text-5xl">
-        {title}
-      </h2>
       {children}
     </section>
   );

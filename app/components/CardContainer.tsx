@@ -1,11 +1,11 @@
 import { cn } from "@/lib/util";
 
-interface Props {
+interface Params {
   children: React.ReactNode;
   className?: string;
 }
 
-const CardContainer = ({ children, className }: Props) => {
+const CardContainer = ({ children, className }: Params) => {
   return (
     <div
       className={cn(

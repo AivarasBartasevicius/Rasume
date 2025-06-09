@@ -4,14 +4,14 @@ import { useResponsiveSize } from "@/lib/hooks";
 import clsx from "clsx";
 import Image from "next/image";
 
-interface RoundImage {
+interface Params {
   w: number;
   h: number;
   pic: string;
   alt: string;
 }
 
-export default function RoundImageContainer({ w, h, pic, alt }: RoundImage) {
+export default function RoundImageContainer({ w, h, pic, alt }: Params) {
   const { effectiveWidth, effectiveHeight } = useResponsiveSize(
     w,
     h,

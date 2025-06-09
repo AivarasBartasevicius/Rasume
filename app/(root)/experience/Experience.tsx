@@ -1,6 +1,7 @@
 import CardContainer from "@/components/CardContainer";
 import CardText from "@/components/CardText";
 import Section from "@/components/Section";
+import Title from "@/components/Title";
 
 interface ExperienceDetail {
   company: string;
@@ -8,7 +9,7 @@ interface ExperienceDetail {
   title: string;
   startDate: string;
   endDate: string;
-  responsibilities: string[]; // Array of bullet points
+  responsibilities: string[];
 }
 
 const workExperienceData: ExperienceDetail[] = [
@@ -51,8 +52,9 @@ const workExperienceData: ExperienceDetail[] = [
 
 export default function Experience({ className }: { className?: string }) {
   return (
-    <Section title="Experience" className={className}>
-      {workExperienceData.map((experience, index) => (
+    <Section className={className}>
+      <Title title="Experience" />
+      {workExperienceData.map((experience) => (
         <CardContainer
           key={experience.company + experience.startDate}
           className="mb-10 md:max-w-[1000px] md:w-[90%] p-8 md:p-10 flex-col"
@@ -63,7 +65,6 @@ export default function Experience({ className }: { className?: string }) {
             titleAddon={experience.title}
             titleAddonSide={`${experience.startDate} - ${experience.endDate}`}
             bulletPoints={experience.responsibilities}
-            isLast={index === workExperienceData.length - 1}
           />
         </CardContainer>
       ))}
