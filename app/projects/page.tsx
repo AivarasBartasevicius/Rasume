@@ -25,7 +25,7 @@ export default function Home() {
         "Front-end":
           "Learning the basics like routing, project structure, element mapping, css with tailwind and more",
       },
-      githubLink: "https://github.com/AivarasBartasevicius/Rasume",
+      githubLink: "https://github.com/AivarasBartasevicius/Resume",
     },
   ];
 
