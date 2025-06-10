@@ -6,7 +6,7 @@ import { ProfileParam } from "@/types/front";
 export default function ProfileDetails({ profile }: ProfileParam) {
   const { profilePic, name, title, contact } = profile;
   return (
-    <div className="flex-shrink-0 w-full p-8 flex flex-col items-center text-center border-b border-gray-200 md:w-[300px] md:p-8 md:border-b-0 md:border-r">
+    <div className="flex-shrink-0 w-full p-8 flex flex-col items-center text-center border-b border-gray-200 md:w-[300px] md:border-b-0 md:border-r">
       <ImageContainer
         w={200}
         h={200}
