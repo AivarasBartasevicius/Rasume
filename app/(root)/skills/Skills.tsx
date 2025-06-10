@@ -10,19 +10,19 @@ interface SkillGroups {
 
 const skillList: SkillGroups[] = [
   {
-    name: "Programming logic",
+    name: "Language & Runtimes & Frameworks",
     skills: ["Typescript", "Javascript", "Node.js", "Express.js", "Rest APIs"],
   },
   {
-    name: "Databases & Storage",
+    name: "Data Management",
     skills: ["PostgreSQL", "TypeORM", "DynamoDB", "AWS S3"],
   },
   {
-    name: "CI/CD",
+    name: "DevOps & Automation",
     skills: ["Docker", "GitHub Actions", "AWS ECR", "Terraform"],
   },
   {
-    name: "Quality Assurance & Scrapping",
+    name: "Testing & Automation",
     skills: ["Jest", "Puppeteer"],
   },
 ];
