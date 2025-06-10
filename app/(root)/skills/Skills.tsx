@@ -10,7 +10,7 @@ interface SkillGroups {
 
 const skillList: SkillGroups[] = [
   {
-    name: "Language & Runtimes & Frameworks",
+    name: "Languages & Runtimes & Frameworks",
     skills: ["Typescript", "Javascript", "Node.js", "Express.js", "Rest APIs"],
   },
   {
