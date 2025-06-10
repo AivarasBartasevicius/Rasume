@@ -1,6 +1,5 @@
 import CardContainer from "@/components/CardContainer";
 import Section from "@/components/Section";
-import Title from "@/components/Title";
 import { BasicParams, ProjectParam } from "@/types/front";
 import ProjectImage from "./ProjectImage";
 import ProjectSummary from "./ProjectSummary";
@@ -9,10 +8,9 @@ export default function ProjectCard({
   project,
   className,
 }: ProjectParam & BasicParams) {
-  const { name, goals } = project;
+  const { goals } = project;
   return (
     <Section className={className}>
-      <Title title={name}></Title>
       <CardContainer className="mb-10 md:max-w-[1000px] md:w-[90%] flex-col md:flex-row">
         <ProjectImage project={project} />
         <ProjectSummary project={project}>
