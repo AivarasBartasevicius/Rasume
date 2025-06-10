@@ -10,6 +10,24 @@ const mediaList = [
   { link: "https://github.com/AivarasBartasevicius", img: "/github.png" },
 ];
 
+const pages: {
+  link: string;
+  name: string;
+}[] = [
+  {
+    link: "/",
+    name: "Resume",
+  },
+  {
+    link: "/projects",
+    name: "Projects",
+  },
+  {
+    link: "/contact",
+    name: "Contact",
+  },
+];
+
 const Navbar = async () => {
   return (
     <div className="px-5 py-3 bg-neutral-100 shadow-sm">
@@ -27,15 +45,11 @@ const Navbar = async () => {
           ))}
         </div>
         <div className="flex items-center text-[color:var(--green-text)] font-bold text-sm md:text-xl gap-5 md:gap-10">
-          <Link href="/">
-            <span>Resume</span>
-          </Link>
-          <Link href="/projects">
-            <span>Projects</span>
-          </Link>
-          <Link href="/contact">
-            <span>Contact</span>
-          </Link>
+          {pages.map((page) => (
+            <Link key={page.name} href={page.link}>
+              <span>{page.name}</span>
+            </Link>
+          ))}
         </div>
       </nav>
     </div>

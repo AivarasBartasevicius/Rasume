@@ -43,6 +43,10 @@ export default function ImageContainer({
     "object-fill": fit === ObjectFit.FILL,
   });
 
+  const ImageComponent = (
+    <Image src={pic} alt={alt} fill className={imageClasses} priority />
+  );
+
   return (
     <div
       className={cn(
@@ -59,10 +63,10 @@ export default function ImageContainer({
     >
       {link ? (
         <Link href={link} target="_blank" passHref>
-          <Image src={pic} alt={alt} fill className={imageClasses} priority />
+          {ImageComponent}
         </Link>
       ) : (
-        <Image src={pic} alt={alt} fill className={imageClasses} priority />
+        ImageComponent
       )}
     </div>
   );
