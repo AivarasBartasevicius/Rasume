@@ -8,4 +8,17 @@ export interface Profile {
   summary: string;
   profilePic: string;
 }
-4;
+
+export interface Project {
+  name: string;
+  image: string;
+  summary: string;
+  goals?: { [key: string]: string };
+  githubLink: string;
+}
+
+export enum ObjectFit {
+  "COVER",
+  "CONTAIN",
+  "FILL",
+}

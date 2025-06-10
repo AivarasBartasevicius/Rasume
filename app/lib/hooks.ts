@@ -15,10 +15,10 @@ export function useResponsiveSize(
 
   useEffect(() => {
     const handleResize = () => {
-      if (typeof window !== "undefined" && window.innerWidth >= breakpoint) {
+      if (window.innerWidth >= breakpoint) {
         setEffectiveWidth(baseWidth);
         setEffectiveHeight(baseHeight);
-      } else if (typeof window !== "undefined") {
+      } else {
         setEffectiveWidth(baseWidth * mobileScaleFactor);
         setEffectiveHeight(baseHeight * mobileScaleFactor);
       }
@@ -26,14 +26,10 @@ export function useResponsiveSize(
 
     handleResize();
 
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize);
-    }
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", handleResize);
-      }
+      window.removeEventListener("resize", handleResize);
     };
   }, [baseWidth, baseHeight, mobileScaleFactor, breakpoint]);
 

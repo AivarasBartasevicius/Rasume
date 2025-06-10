@@ -1,4 +1,4 @@
-import { Profile } from "./back";
+import { Profile, Project } from "./back";
 
 export interface BasicParams {
   children?: React.ReactNode;
@@ -8,4 +8,8 @@ export interface BasicParams {
 
 export interface ProfileParam {
   profile: Profile;
+}
+
+export interface ProjectParam {
+  project: Project;
 }
