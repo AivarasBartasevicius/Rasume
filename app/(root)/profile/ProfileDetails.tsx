@@ -13,7 +13,7 @@ export default function ProfileDetails({ profile }: ProfileParam) {
         pic={profilePic}
         alt={name}
         rounded={true}
-        className="mb-4 md:mb-5 shadow-md"
+        className="mb-4 md:mb-5 shadow-md w-[150px] h-[150px] md:w-[200px] md:h-[200px]"
       />
       <h1 className="text-3xl font-medium mb-1 leading-tight text-[color:var(--green-text)] md:text-2xl">
         {name}
